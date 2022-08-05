@@ -80,14 +80,8 @@
             <th>penerbit</th>
         </tr>
         
-        <?php
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "db_perpusweb";
-        
-        $connect = mysqli_connect($servername, $username, $password, $database);
-        
+        <?php 
+        include 'koneksi.php';
         $no = 1;
         $data = mysqli_query($connect, "SELECT * FROM buku");
         while ($d = mysqli_fetch_array($data)) {
